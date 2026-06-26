@@ -3,14 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main-page-styles.css">
-    <title>My Personal Website</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Mercury Morkamo - My personal page :)</title>
 </head>
-<body class="page-box">
-    <img src="assets/images/morkamo-profile-logo.jpg" alt="Profile Picture" class="profile-picture">
-    <div class="greeting-text">
-        <span class="gretting-text-intro">Hello, I'm Morkamo!</span><br>
-        Welcome to my mini-page of me. This small and simple website collects a little bit information about me, my hobbies, and my projects!
+<body>
+    <div class="container">
+        <div h1 class="header-box">
+            <div class="header-box-author-name">Mercury Morkamo</div>
+            <div class="header-box-navigation">
+                <a href="#about-me">Обо мне</a>
+                <a href="#skills">Навыки</a>
+                <a href="#projects">Проекты</a>
+                <a href="#contacts">Контакты</a>
+            </div>
+        </div>
     </div>
+        <div class="container">
+        <div class="content-box">
+            <div class="about-me-box-content">
+                <div class="about-me-text-wrapper">
+                    <div class="about-me-box-title">Немного обо мне</div> 
+                    <p>Привет! Я Кирилл Дроздов (Mercury Morkamo) а это мой маленький сайт!</p>
+                    <p>Я программист любитель и занимаюсь разработкой всяких маленьких проектов.
+                    Тут вы можете увидеть некоторую информацию обо мне.</p>
+                    <p>Так же хочу сказать что этот сайт был сделан без использования ИИ, поэтому тут могут быть баги (^w^)</p>
+                </div>
+                <img class="about-me-box-picture" src="assets/images/morkamo-profile-logo.jpg" alt="Mercury Morkamo Picture">
+            </div>
+        </div>
+        <div class="content-box">
+            <div class="about-my-languages-wrapper">
+                <div class="about-my-languages-box-title">Мои языки</div> 
+                <div class="about-my-languages-languages-container">
+                    <div class="about-my-languages-languages-card" style="--shadow-color: rgba(97, 0, 252, 0.5);">
+                        <img class="about-my-languages-language-ico" src="assets/images/csharp-logo.jpg" alt="csharp language ico">
+                        <p class="about-my-languages-text">CSharp</p>
+                    </div>
+                    <div class="about-my-languages-languages-card" style="--shadow-color: rgb(255, 162, 33);">
+                        <img class="about-my-languages-language-ico" src="assets/images/python-logo.png" alt="python language ico">
+                        <p class="about-my-languages-text">Python</p>
+                    </div>
+                    <div class="about-my-languages-languages-card" style="--shadow-color: rgb(213, 82, 0);">
+                        <img class="about-my-languages-language-ico" src="assets/images/html-logo.png" alt="html language ico">
+                        <p class="about-my-languages-text">HTML</p>
+                    </div>
+                    <div class="about-my-languages-languages-card" style="--shadow-color: rgb(255, 185, 56);">
+                        <img class="about-my-languages-language-ico" src="assets/images/js-logo.png" alt="javascript language ico">
+                        <p class="about-my-languages-text">JavaScript</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
