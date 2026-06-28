@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
 /* #region general */
+:root {
+    --background-color: #f0ebff;
+}
+
 .content-box {
     margin: 30px auto;
     padding: 50px;
@@ -13,10 +17,6 @@
     box-shadow: 0px 4px 12px #bf91e333;
 }
 /* #endregion */
-
-:root {
-    --background-color: #f0ebff;
-}
 
 /* #region internal-selectors */
 body {
@@ -104,6 +104,7 @@ a {
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.7)
 }
 
 /* #endregion */
@@ -124,6 +125,7 @@ a {
 .about-my-languages-languages-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
@@ -138,14 +140,108 @@ a {
 
 .about-my-languages-language-ico {
     object-fit: scale-down;
-    width: 150px;
-    height: 150px;
+    width: 141px;
+    height: 141px;
     border-radius: 30px;
 }
 
 .about-my-languages-text {
     margin: 0;
     font-size: 25px;
+}
+
+/* #endregion */
+
+/* #region about-my-frameworks */
+
+.about-my-frameworks-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.about-my-frameworks-box-title {
+    font-size: 40px;
+    padding-bottom: 25px;
+}
+
+.about-my-frameworks-framework-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.about-my-frameworks-framework-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    padding: 5px;
+    box-shadow: 0px 5px 8px var(--shadow-color, rgba(0, 0, 0, 0.5))
+}
+
+.about-my-frameworks-framework-ico {
+    object-fit: scale-down;
+    width: 141px;
+    height: 141px;
+    border-radius: 30px;
+}
+
+.about-my-frameworks-text {
+    margin: 0;
+    font-size: 25px;
+}
+
+/* #endregion */
+
+/* #region about-my-projects */
+
+.about-my-projects-main-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 40px;
+}
+
+.about-my-projects-left-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-my-projects-box-title {
+    font-size: 40px;
+    padding-bottom: 15px;
+    margin: 0;
+}
+
+.about-my-projects-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 18px;
+}
+
+.about-my-projects-text-wrapper p {
+    margin: 10px 0;
+}
+
+/* Правая колонка выстраивает картинки в столбик */
+.about-my-projects-pictures-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+.about-my-projects-picture {
+    height: 190px;
+    width: 190px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* #endregion */
