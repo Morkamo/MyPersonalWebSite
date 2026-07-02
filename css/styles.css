@@ -66,10 +66,6 @@ a {
     font-size: 22px;
 }
 
-.header-box-author-name:hover {
-    
-}
-
 .header-box-navigation {
     display: flex;
     gap: 20px;
