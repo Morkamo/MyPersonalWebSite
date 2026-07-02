@@ -7,19 +7,20 @@
     <title>Mercury Morkamo - My personal page :)</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="header">
         <div h1 class="header-box">
             <div class="header-box-author-name">Mercury Morkamo</div>
             <div class="header-box-navigation">
                 <a href="#about-me">Обо мне</a>
-                <a href="#skills">Навыки</a>
-                <a href="#projects">Проекты</a>
-                <a href="#contacts">Контакты</a>
+                <a href="#my-skills">Языки</a>
+                <a href="#my-tools">Инструменты</a>
+                <a href="#my-projects">Проекты</a>
+                <a href="#my-contacts">Контакты</a>
             </div>
         </div>
     </div>
         <div class="container">
-        <div class="content-box">
+        <div class="content-box" id="about-me">
             <div class="about-me-box-content">
                 <div class="about-me-text-wrapper">
                     <div class="about-me-box-title">Немного обо мне</div> 
@@ -31,7 +32,7 @@
                 <img class="about-me-box-picture" src="assets/images/morkamo-profile-logo.jpg" alt="Mercury Morkamo Picture">
             </div>
         </div>
-        <div class="content-box">
+        <div class="content-box" id="my-skills">
             <div class="about-my-languages-wrapper">
                 <div class="about-my-languages-box-title">Мои языки</div> 
                 <div class="about-my-languages-languages-container">
@@ -62,7 +63,7 @@
                 </div>
             </div>
         </div>
-        <div class="content-box">
+        <div class="content-box" id="my-tools">
             <div class="about-my-frameworks-wrapper">
                 <div class="about-my-frameworks-box-title">Мои фреймворки и инструменты</div> 
                 <div class="about-my-frameworks-framework-container">
@@ -93,7 +94,7 @@
                 </div>
             </div>
         </div>
-        <div class="content-box">
+        <div class="content-box" id="my-projects">
             <div class="about-my-projects-main-row">
                 <div class="about-my-projects-left-column">
                     <div class="about-my-projects-box-title">О моих работах</div>
@@ -117,7 +118,7 @@
                 </div>
             </div>
         </div>
-        <div class="content-box">
+        <div class="content-box" id="my-contacts">
             <div class="my-contacts-content-box">
                 <div class="my-contacts-content-box-title">Мои контакты</div>
                 <div class="my-contacts-content-box-text-wrapper">
@@ -130,7 +131,7 @@
                         <span>Telegram</span>
                     </a>
                     <!-- Необходимо подключить JS для копирования при нажатии - mercury_morkamo -->
-                    <a href="#mercury_morkamo" class="contact-button discord-button">
+                    <a href="#mercury_morkamo" class="contact-button discord-button" data-clipboard-text="mercury_morkamo">
                         <img class="contact-button-icon" src="assets/images/discord-logo.png" alt="Discord">
                         <span>Discord</span>
                     </a>
@@ -150,7 +151,7 @@
                     <p style="text-align: center; font-size: 30px;">_-"0w0"-_</p>
                 </div>
                 <div class="footer-buttons-container">
-                    <a href="#about-me" class="question-mark-button">
+                    <a href="#header" class="question-mark-button">
                         <img class="question-mark-button-icon" src="assets/images/question-mark-logo.png" alt="question-mark">
                         <p>Что это за кнопка</p>
                         <img class="question-mark-button-icon" src="assets/images/question-mark-logo.png" alt="question-mark">
@@ -160,5 +161,6 @@
         </div>
     </div>
 </div>
+    <script src="js/script.js"></script>
 </body>
 </html>

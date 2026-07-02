@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
 /* #region general */
+
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --background-color: #f0ebff;
 }
 
 .content-box {
+    scroll-margin-top: 80px;
     margin: 30px auto;
     padding: 50px;
     box-sizing: border-box;
@@ -16,9 +22,7 @@
     border-radius: 30px;
     box-shadow: 0px 4px 12px #bf91e333;
 }
-/* #endregion */
 
-/* #region internal-selectors */
 body {
     margin: 0;
     font-family: "Manrope", sans-serif;
@@ -32,6 +36,7 @@ a {
 }
 
 .container {
+    scroll-margin-top: 80px;
     width: 100%;          /* На маленьких экранах (мобилках) контейнер займет всю ширину */
     max-width: 1200px;    /* На больших мониторах он НИКОГДА не станет шире 1200 пикселей */
     margin: 0 auto;       /* Магическое выравнивание: центрирует этот контейнер на экране */
@@ -40,7 +45,6 @@ a {
 }
 
 /* #endregion */
-
 
 /* #region header-box */
 .header-box {
@@ -107,6 +111,35 @@ a {
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.7)
 }
 
+@keyframes blink-about-me-picture {
+    0% {
+        box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.7)
+    }
+    50% {
+        box-shadow: 0px 4px 13px rgba(0, 0, 0, 1);
+    }
+    100% {
+        box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.7);
+    }
+}
+
+.about-me-box-picture:hover {
+    animation: blink-about-me-picture 0.3s ease forwards;
+}
+
+@keyframes spinning-about-me-picture {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.about-me-box-picture.spinning {
+    animation: spinning-about-me-picture 0.6s ease forwards;
+}
+
 /* #endregion */
 
 /* #region about-my-languages */
@@ -135,7 +168,25 @@ a {
     align-items: center;
     border-radius: 30px;
     padding: 5px;
+    transition: box-shadow 0.2s ease;
     box-shadow: 0px 5px 8px var(--shadow-color, rgba(0, 0, 0, 0.5))
+}
+
+@keyframes wiggle-language-cards {
+    0% {
+        transform: translateY(0) rotateZ(0deg);
+    }
+    25% {
+        transform: translateY(-10px) rotateZ(5deg); /* В середине анимации взлетаем и наклоняемся вправо */
+    }
+    50% {
+        transform: translateY(-10px) rotateZ(-5deg); /* В конце наклоняемся влево, оставаясь вверху */
+    }
+}
+
+.about-my-languages-languages-card:hover {
+    animation: wiggle-language-cards 0.3s ease forwards;
+    box-shadow: 0px 5px 23px var(--shadow-color, rgba(0, 0, 0, 1))
 }
 
 .about-my-languages-language-ico {
@@ -178,7 +229,25 @@ a {
     align-items: center;
     border-radius: 30px;
     padding: 5px;
+    transition: box-shadow 0.2s ease;
     box-shadow: 0px 5px 8px var(--shadow-color, rgba(0, 0, 0, 0.5))
+}
+
+@keyframes wiggle-framework-cards {
+    0% {
+        transform: translateY(0) rotateZ(0deg);
+    }
+    25% {
+        transform: translateY(-10px) rotateZ(5deg); /* В середине анимации взлетаем и наклоняемся вправо */
+    }
+    50% {
+        transform: translateY(-10px) rotateZ(-5deg); /* В конце наклоняемся влево, оставаясь вверху */
+    }
+}
+
+.about-my-frameworks-framework-card:hover {
+    animation: wiggle-framework-cards 0.3s ease forwards;
+    box-shadow: 0px 5px 23px var(--shadow-color, rgba(0, 0, 0, 1))
 }
 
 .about-my-frameworks-framework-ico {
@@ -228,7 +297,6 @@ a {
     margin: 10px 0;
 }
 
-/* Правая колонка выстраивает картинки в столбик */
 .about-my-projects-pictures-container {
     display: flex;
     flex-direction: column;
