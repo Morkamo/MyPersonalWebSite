@@ -37,10 +37,10 @@ a {
 
 .container {
     scroll-margin-top: 80px;
-    width: 100%;          /* На маленьких экранах (мобилках) контейнер займет всю ширину */
-    max-width: 1200px;    /* На больших мониторах он НИКОГДА не станет шире 1200 пикселей */
-    margin: 0 auto;       /* Магическое выравнивание: центрирует этот контейнер на экране */
-    padding: 0 20px;      /* Безопасные отступы по бокам, чтобы на телефонах контент не лип к краям экрана */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
     box-sizing: border-box; 
 }
 
@@ -123,7 +123,7 @@ a {
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.7)
 }
 
-.mobile-variant-nonexistent {
+.mobile-variant-available {
     width: fit-content;
     box-sizing: border-box;
     border-radius: 12px;
@@ -133,7 +133,7 @@ a {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.mobile-variant-nonexistent:hover {
+.mobile-variant-available:hover {
     transform: translateY(-1px) scale(1.1) rotate(-1deg);
     box-shadow: 0px 0px 8px rgb(111, 0, 255)
 }
@@ -204,10 +204,10 @@ a {
         transform: translateY(0) rotateZ(0deg);
     }
     25% {
-        transform: translateY(-10px) rotateZ(5deg); /* В середине анимации взлетаем и наклоняемся вправо */
+        transform: translateY(-10px) rotateZ(5deg);
     }
     50% {
-        transform: translateY(-10px) rotateZ(-5deg); /* В конце наклоняемся влево, оставаясь вверху */
+        transform: translateY(-10px) rotateZ(-5deg);
     }
 }
 
@@ -265,10 +265,10 @@ a {
         transform: translateY(0) rotateZ(0deg);
     }
     25% {
-        transform: translateY(-10px) rotateZ(5deg); /* В середине анимации взлетаем и наклоняемся вправо */
+        transform: translateY(-10px) rotateZ(5deg);
     }
     50% {
-        transform: translateY(-10px) rotateZ(-5deg); /* В конце наклоняемся влево, оставаясь вверху */
+        transform: translateY(-10px) rotateZ(-5deg);
     }
 }
 
@@ -488,3 +488,94 @@ a {
 }
 
 /* #endregion */
+
+
+@media (max-width: 768px) {
+    
+    .content-box {
+        padding: 30px 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-box {
+        height: auto;
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .header-box-navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 15px;
+    }
+
+    .about-me-box-content {
+        flex-direction: column-reverse;
+        gap: 25px;
+    }
+
+    .about-me-box-picture {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-me-text-wrapper {
+        align-items: center;
+    }
+
+    .about-my-languages-wrapper, 
+    .about-my-frameworks-wrapper {
+        align-items: center;
+    }
+
+    .about-my-languages-languages-container,
+    .about-my-frameworks-framework-container {
+        justify-content: center;
+    }
+
+    .about-my-languages-languages-card,
+    .about-my-frameworks-framework-card {
+        width: 110px;
+        height: 130px;
+    }
+
+    .about-my-languages-language-ico,
+    .about-my-frameworks-framework-ico {
+        width: 100px;
+        height: 100px;
+    }
+
+    .about-my-languages-text,
+    .about-my-frameworks-text {
+        font-size: 18px;
+    }
+
+    .about-my-projects-main-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .about-my-projects-pictures-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .about-my-projects-picture {
+        width: 150px;
+        height: 150px;
+    }
+
+    .my-contacts-buttons-container {
+        flex-direction: column;
+        gap: 12px;
+        height: 200px;
+    }
+
+    .contact-button {
+        width: 100%;
+        height: 60px;
+    }
+}
