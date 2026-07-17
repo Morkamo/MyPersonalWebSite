@@ -5,7 +5,7 @@
 
 ---
 
-<img width="2538" height="1267" alt="Снимок сайта" src="https://github.com/user-attachments/assets/b17ede8f-55d9-43f8-b3ae-9dc16b70337c" />
+<img width="1624" height="1268" alt="{38BE294D-AF29-447E-8B0C-26E410568E6C}" src="https://github.com/user-attachments/assets/997023ff-ad48-4f18-bdc7-659caa358a6e" />
 
 ---
 
